@@ -24,7 +24,8 @@ app.set('view engine', 'ejs');
 const apiKey = process.env.API_KEY;
 
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
