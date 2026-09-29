@@ -1,7 +1,12 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+
 import 'ejs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -10,6 +15,10 @@ dotenv.config();
 // create server and telling him which port we use
 const app = express();
 const port = 3000;
+
+app.set('views', path.join(__dirname, 'views'));
+
+
 // my api key from https://home.openweathermap.org/users/sign_in 
 const apiKey = process.env.API_KEY;
 
