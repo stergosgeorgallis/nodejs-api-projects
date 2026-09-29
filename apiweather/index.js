@@ -18,6 +18,7 @@ const port = 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 
+app.set('view engine', 'ejs');
 
 // my api key from https://home.openweathermap.org/users/sign_in 
 const apiKey = process.env.API_KEY;
