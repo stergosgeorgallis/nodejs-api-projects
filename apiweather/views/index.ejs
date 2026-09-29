@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capstone Weather App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Capstone Weather App</h1>
+        
+        <!-- Post to js server -->
+        <form action="/" method="POST">
+            <!-- look cityName for js -->
+            <input type="text" name="cityName" placeholder="Enter city name..." required autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
+
+        
+        <% if (error) { %>
+            <div class="error">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+
+        
+        <% if (weatherData) { %>
+            <div class="weather-card">
+                <!-- API sends name to weatherData.name -->
+                <!-- ΑΠΟ ΤΟΝ ΦΑΚΕΛΟ SYS ΠΉΡΑ ΤΟ COUNTRY ΑΥΤΑ ΕΙΝΑΙ ΑΠΟ ΤΟ JSON ΑΡΧΕΙΟ ΠΟΥ ΜΑΣ ΕΦΕΡΕ ΤΟ AXIOS ΑΠΟ ΤΟ OPENAPI -->
+                <h2><%= weatherData.name %>, <%= weatherData.sys.country %></h2>
+                <p class="temperature"><%= weatherData.main.temp %>°C</p>
+                <p class="description"><%= weatherData.weather[0].description %></p>
+                <img src="http://openweathermap.org/img/wn/<%= weatherData.weather[0].icon %>@2x.png" alt="Weather icon">
+            </div>
+        <% } %>
+
+    </div>
+
+</body>
+</html>

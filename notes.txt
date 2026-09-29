@@ -1,0 +1,34 @@
+What makes an API RESTful?
+1st rule: uses standard HTTP Methods: Get, post, put, patch, delete
+mathods to interact with the API
+2nd rule: pobably have a standard format that data response with -> JSON format or XML format
+3rd: clients and servers are completly seperate
+4th: resource based -> sending around resources
+Internet has RESTful architecture using HTTP standardProtocol, client-server seperation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
