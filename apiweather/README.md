@@ -1,6 +1,6 @@
 # Weather App
 A simple web application built with Node.js and Express that lets users search for a city and see current weather conditions using the OpenWeatherMap API.
-
+**Live Demo:** [https://my-weather-app-gamma-eight.vercel.app](https://my-weather-app-gamma-eight.vercel.app)
 ## Features
 - Connects to the OpenWeatherMap REST API to fetch data.
 - Renders the user interface server-side using EJS.
